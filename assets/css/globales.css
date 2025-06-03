@@ -1,0 +1,85 @@
+:root {
+  --primary-color: #007593;
+  --secondery-color: #7cc242;
+  --black-color: #000000;
+  --white-color: #ffffff;
+  --body-bg: #f0f1f3;
+  --border-raduis: 8px;
+  --border-color: #d5d7da;
+}
+body {
+  font-family: "Tajawal", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  background-color: var(--body-bg);
+  color: var(--black-color);
+}
+* {
+  box-sizing: border-box;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  height: 0;
+}
+::-webkit-scrollbar-track {
+  background: var(--white-color);
+  border-radius: 0px;
+}
+::-webkit-scrollbar-track-piece {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  border-radius: 5px;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+*:focus {
+  outline: none !important;
+}
+a,
+button,
+img,
+input {
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.custom-ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.custom-btn {
+  background-color: transparent;
+  border-radius: 0;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+.cutom-h {
+  padding: 0;
+  margin: 0;
+}
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+html[dir="rtl"] [type="email"],
+html[dir="rtl"] [type="number"],
+html[dir="rtl"] [type="tel"],
+html[dir="rtl"] [type="url"] {
+  direction: rtl;
+}
+.collapse {
+  overflow: hidden;
+  transition: 0.3s ease;
+  height: 0;
+  opacity: 0;
+}
