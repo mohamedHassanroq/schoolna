@@ -25,7 +25,7 @@
 body {
   font-family: "Tajawal", sans-serif;
   font-weight: normal;
-  min-width: 400px;
+  /* min-width: 400px; */
   max-width: 1600px;
   margin: auto;
   min-height: 100vh;

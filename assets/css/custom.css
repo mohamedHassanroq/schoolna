@@ -502,7 +502,7 @@ main {
   width: calc(100% - 105px);
   margin-right: auto;
   height: 100vh;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 .main-content {
   padding-block: clamp(24px, 3vw, 50px);
