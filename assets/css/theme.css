@@ -32,7 +32,6 @@ body {
   font-size: 14px;
   background-color: var(--body-bg);
   color: var(--black-color);
-  padding-top: 72px;
 }
 * {
   box-sizing: border-box;

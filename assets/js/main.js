@@ -140,4 +140,12 @@ document.addEventListener("DOMContentLoaded", function () {
       document.querySelector(targetSelector)?.classList.add("show", "active");
     }
   });
+
+  let aside_open_icon = document.querySelector(".aside_open_icon");
+  let aside = document.querySelector("aside");
+
+  aside_open_icon.addEventListener("click", function() {
+    aside.classList.toggle("open");
+    aside_open_icon.classList.toggle("open");
+  });
 });

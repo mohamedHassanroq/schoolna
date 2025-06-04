@@ -177,12 +177,12 @@ aside {
   background-color: var(--primary);
   color: #fff;
   position: fixed;
-  /* transition: width 0.4s ease-in-out; */
+  transition: width 0.4s ease-in-out;
   direction: ltr;
   width: 105px;
   height: 100%;
   overflow: auto;
-  z-index: 1;
+  z-index: 4;
   inset-block-start: 0px;
   /* transform: translate(0px, 0px); */
   text-align: center;
@@ -445,10 +445,10 @@ input[type="search"] {
   align-items: center;
   justify-content: space-between;
   gap: clamp(3px, 0.2vw, 10px);
-  position: fixed;
-  z-index: 50;
+  position: sticky;
+  z-index: 3;
   top: 0;
-  width: calc(100% - (105px + var(--main-padding-inline) * 2));
+  width: 100%;
 }
 .user-controls {
   display: flex;
@@ -913,6 +913,23 @@ html[dir="rtl"] select.form-control {
   font-size: 12px;
   margin-inline-end: 5px;
 }
+.aside_open_icon {
+    position: fixed;
+    top: 10%;
+    right: 0px;
+    transform: translate(0%, -50%);
+    background-color: var(--primary);
+    color: #fff;
+    width: 50px;
+    z-index: 5;
+    border-radius: 12px 0px 0px 12px;
+    height: 38px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    transition: right 0.4s ease-in-out;
+}
+
 @media screen and (max-width: 767px) {
   .accordion-title > button {
     font-size: 16px;
@@ -926,5 +943,27 @@ html[dir="rtl"] select.form-control {
   }
   .form-check-label {
     font-size: 12px;
+  }
+}
+
+@media screen and (max-width:454px) {
+  aside {
+    position: absolute;
+    width: 0px;
+  }
+  aside.open {
+    width: 105px;
+  }
+  .aside_open_icon {
+    display: flex;
+  }
+  .aside_open_icon.open {
+    right: 103px;
+  }
+   .aside_open_icon.open i::before {
+    content: "\f101";
+   }
+  main {
+    width: 100%;
   }
 }
