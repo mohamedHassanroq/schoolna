@@ -1,0 +1,518 @@
+/*!
+ * Icon Font Schoolna
+ * Made with love by Icons8 [ https://icons8.com/ ] using webfont [ https://github.com/itgalaxy/webfont ]
+ *
+ * Contacts:
+ *    [ https://icons8.com/contact ]
+ *
+ * Follow Icon8 on
+ *    Twitter [ https://twitter.com/icons_8 ]
+ *    Facebook [ https://www.facebook.com/Icons8 ]
+ *    Google+ [ https://plus.google.com/+Icons8 ]
+ *    GitHub [ https://github.com/icons8 ]
+ */
+
+@font-face {
+  font-family: "Schoolna";
+  src: url("../fonts/Schoolna.eot");
+  src: url("../fonts/Schoolna.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/Schoolna.woff2") format("woff2"),
+  url("../fonts/Schoolna.woff") format("woff"),
+  url("../fonts/Schoolna.ttf") format("truetype"),
+  url("../fonts/Schoolna.svg#font") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: "Schoolna";
+    src: url("../fonts/Schoolna.svg#Schoolna") format("svg");
+  }
+}
+
+[data-icons8]:before {
+  content: attr(data-icons8);
+}
+
+.schoolna-adm-year-level-seats-icon:before,
+.schoolna-att-attendance-icon:before,
+.schoolna-att-homeroom-attendance:before,
+.schoolna-att-report-icon:before,
+.schoolna-bil-academic-years:before,
+.schoolna-bil-accepted-admission:before,
+.schoolna-bil-funding-organizations:before,
+.schoolna-bil-report-icon:before,
+.schoolna-bil-staff-payment:before,
+.schoolna-dis-action-icon:before,
+.schoolna-dis-incidents-icons:before,
+.schoolna-dis-locations-icon:before,
+.schoolna-dis-penalties-icon:before,
+.schoolna-dis-report-icon:before,
+.schoolna-dis-violation-categories:before,
+.schoolna-dis-violation-icon:before,
+.schoolna-gra-columns:before,
+.schoolna-gra-factor:before,
+.schoolna-gra-gradebook-grades-setup:before,
+.schoolna-gra-grade-books:before,
+.schoolna-gra-guidebook-reports:before,
+.schoolna-gra-marking-periods:before,
+.schoolna-gra-weekly-plans:before,
+.schoolna-lib-book-checkout:before,
+.schoolna-lib-book-formats:before,
+.schoolna-lib-books:before,
+.schoolna-lib-books-catalogs:before,
+.schoolna-lib-book-setting:before,
+.schoolna-lib-books-subjects:before,
+.schoolna-lib-memberships:before,
+.schoolna-lib-staff-settings:before,
+.schoolna-mer-merits:before,
+.schoolna-mer-merits-reasons:before,
+.schoolna-mer-merits-reports:before,
+.schoolna-reg-biifurcation-stuents:before,
+.schoolna-reg-enrolled-students:before,
+.schoolna-reg-familied-icon:before,
+.schoolna-reg-regisreation-report:before,
+.schoolna-reg-registered-student:before,
+.schoolna-sch-calender-svg:before,
+.schoolna-sch-report-icon:before,
+.schoolna-sch-time-tables:before,
+.schoolna-set-areas-icon:before,
+.schoolna-set-birth-placess:before,
+.schoolna-set-blocks-icon:before,
+.schoolna-set-buildings-icon:before,
+.schoolna-set-calendar-icon:before,
+.schoolna-set-chronic-diseases:before,
+.schoolna-set-classes-icon:before,
+.schoolna-set-classess-rooms:before,
+.schoolna-set-disability-types:before,
+.schoolna-set-districs-icon:before,
+.schoolna-set-external-school:before,
+.schoolna-set-hod-leaders:before,
+.schoolna-set-holiday-icon:before,
+.schoolna-set-nationalities-icon:before,
+.schoolna-set-passport-types:before,
+.schoolna-set-previous-schools:before,
+.schoolna-set-print-bulk:before,
+.schoolna-set-relation-statuses:before,
+.schoolna-set-relative-relations:before,
+.schoolna-set-religions-icon:before,
+.schoolna-set-school-info:before,
+.schoolna-set-stages-icon:before,
+.schoolna-set-streets-icon:before,
+.schoolna-set-students-groups:before,
+.schoolna-set-sub-class:before,
+.schoolna-set-subjects-icon:before,
+.schoolna-set-system-logs:before,
+.schoolna-set-teacers-icon:before,
+.schoolna-set-years-levels:before,
+.schoolna-set-zatca-setting:before,
+.schoolna-sid-admission-icon:before,
+.schoolna-sid-announcment-icon:before,
+.schoolna-sid-attendance-icon:before,
+.schoolna-sid-billing-icon:before,
+.schoolna-sid-complaints-icon:before,
+.schoolna-sid-disclipline-icon:before,
+.schoolna-sid-grade-book:before,
+.schoolna-sid-home-icon:before,
+.schoolna-sid-home-svg:before,
+.schoolna-sid-letters-icon:before,
+.schoolna-sid-library-icon:before,
+.schoolna-sid-merits-icon:before,
+.schoolna-sid-notification-icon:before,
+.schoolna-sid-parant-meeting:before,
+.schoolna-sid-registration-icon:before,
+.schoolna-sid-scheduling-icon:before,
+.schoolna-sid-setiing-icon:before,
+.schoolna-sid-transportation-icon:before,
+.schoolna-sid-users-icon:before,
+.schoolna-tran-bus-attendance:before,
+.schoolna-tran-bus-comments:before,
+.schoolna-tran-buses:before,
+.schoolna-tran-bus-registrations:before,
+.schoolna-tran-bus-registrations-groups:before,
+.schoolna-tran-bus-size:before,
+.schoolna-tran-bus-student:before,
+.schoolna-tran-bus-type:before,
+.schoolna-tran-discipline:before,
+.schoolna-tran-parents-pickup-requests:before,
+.schoolna-tran-printing:before,
+.schoolna-tran-routes:before,
+.schoolna-tran-stop-type:before,
+.schoolna-tran-student-transfers:before,
+.schoolna-tran-trips-request:before,
+.schoolna-tran-trips:before,
+.schoolna-adm-admission-report-icon:before,
+.schoolna-adm-admission-users-icon:before,
+.schoolna-adm-interviews-results-icon:before,
+.schoolna-adm-new-students-report-icon:before,
+.schoolna-adm-required-papers-icon:before,
+.schoolna-adm-school-age-criteria-icon:before,
+.schoolna-adm-tests-icon:before,
+.schoolna-adm-tests-requests-icon:before,
+.schoolna-adm-waiting-list-icon:before,
+.icons8,
+[data-icons8]:before {
+  display: inline-block;
+  font-family: "Schoolna";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+
+.schoolna-adm-year-level-seats-icon:before {
+  content: "\f100";
+}
+.schoolna-att-attendance-icon:before {
+  content: "\f101";
+}
+.schoolna-att-homeroom-attendance:before {
+  content: "\f102";
+}
+.schoolna-att-report-icon:before {
+  content: "\f103";
+}
+.schoolna-bil-academic-years:before {
+  content: "\f104";
+}
+.schoolna-bil-accepted-admission:before {
+  content: "\f105";
+}
+.schoolna-bil-funding-organizations:before {
+  content: "\f106";
+}
+.schoolna-bil-report-icon:before {
+  content: "\f107";
+}
+.schoolna-bil-staff-payment:before {
+  content: "\f108";
+}
+.schoolna-dis-action-icon:before {
+  content: "\f109";
+}
+.schoolna-dis-incidents-icons:before {
+  content: "\f10a";
+}
+.schoolna-dis-locations-icon:before {
+  content: "\f10b";
+}
+.schoolna-dis-penalties-icon:before {
+  content: "\f10c";
+}
+.schoolna-dis-report-icon:before {
+  content: "\f10d";
+}
+.schoolna-dis-violation-categories:before {
+  content: "\f10e";
+}
+.schoolna-dis-violation-icon:before {
+  content: "\f10f";
+}
+.schoolna-gra-columns:before {
+  content: "\f110";
+}
+.schoolna-gra-factor:before {
+  content: "\f111";
+}
+.schoolna-gra-gradebook-grades-setup:before {
+  content: "\f112";
+}
+.schoolna-gra-grade-books:before {
+  content: "\f113";
+}
+.schoolna-gra-guidebook-reports:before {
+  content: "\f114";
+}
+.schoolna-gra-marking-periods:before {
+  content: "\f115";
+}
+.schoolna-gra-weekly-plans:before {
+  content: "\f116";
+}
+.schoolna-lib-book-checkout:before {
+  content: "\f117";
+}
+.schoolna-lib-book-formats:before {
+  content: "\f118";
+}
+.schoolna-lib-books:before {
+  content: "\f119";
+}
+.schoolna-lib-books-catalogs:before {
+  content: "\f11a";
+}
+.schoolna-lib-book-setting:before {
+  content: "\f11b";
+}
+.schoolna-lib-books-subjects:before {
+  content: "\f11c";
+}
+.schoolna-lib-memberships:before {
+  content: "\f11d";
+}
+.schoolna-lib-staff-settings:before {
+  content: "\f11e";
+}
+.schoolna-mer-merits:before {
+  content: "\f11f";
+}
+.schoolna-mer-merits-reasons:before {
+  content: "\f120";
+}
+.schoolna-mer-merits-reports:before {
+  content: "\f121";
+}
+.schoolna-reg-biifurcation-stuents:before {
+  content: "\f122";
+}
+.schoolna-reg-enrolled-students:before {
+  content: "\f123";
+}
+.schoolna-reg-familied-icon:before {
+  content: "\f124";
+}
+.schoolna-reg-regisreation-report:before {
+  content: "\f125";
+}
+.schoolna-reg-registered-student:before {
+  content: "\f126";
+}
+.schoolna-sch-calender-svg:before {
+  content: "\f127";
+}
+.schoolna-sch-report-icon:before {
+  content: "\f128";
+}
+.schoolna-sch-time-tables:before {
+  content: "\f129";
+}
+.schoolna-set-areas-icon:before {
+  content: "\f12a";
+}
+.schoolna-set-birth-placess:before {
+  content: "\f12b";
+}
+.schoolna-set-blocks-icon:before {
+  content: "\f12c";
+}
+.schoolna-set-buildings-icon:before {
+  content: "\f12d";
+}
+.schoolna-set-calendar-icon:before {
+  content: "\f12e";
+}
+.schoolna-set-chronic-diseases:before {
+  content: "\f12f";
+}
+.schoolna-set-classes-icon:before {
+  content: "\f130";
+}
+.schoolna-set-classess-rooms:before {
+  content: "\f131";
+}
+.schoolna-set-disability-types:before {
+  content: "\f132";
+}
+.schoolna-set-districs-icon:before {
+  content: "\f133";
+}
+.schoolna-set-external-school:before {
+  content: "\f134";
+}
+.schoolna-set-hod-leaders:before {
+  content: "\f135";
+}
+.schoolna-set-holiday-icon:before {
+  content: "\f136";
+}
+.schoolna-set-nationalities-icon:before {
+  content: "\f137";
+}
+.schoolna-set-passport-types:before {
+  content: "\f138";
+}
+.schoolna-set-previous-schools:before {
+  content: "\f139";
+}
+.schoolna-set-print-bulk:before {
+  content: "\f13a";
+}
+.schoolna-set-relation-statuses:before {
+  content: "\f13b";
+}
+.schoolna-set-relative-relations:before {
+  content: "\f13c";
+}
+.schoolna-set-religions-icon:before {
+  content: "\f13d";
+}
+.schoolna-set-school-info:before {
+  content: "\f13e";
+}
+.schoolna-set-stages-icon:before {
+  content: "\f13f";
+}
+.schoolna-set-streets-icon:before {
+  content: "\f140";
+}
+.schoolna-set-students-groups:before {
+  content: "\f141";
+}
+.schoolna-set-sub-class:before {
+  content: "\f142";
+}
+.schoolna-set-subjects-icon:before {
+  content: "\f143";
+}
+.schoolna-set-system-logs:before {
+  content: "\f144";
+}
+.schoolna-set-teacers-icon:before {
+  content: "\f145";
+}
+.schoolna-set-years-levels:before {
+  content: "\f146";
+}
+.schoolna-set-zatca-setting:before {
+  content: "\f147";
+}
+.schoolna-sid-admission-icon:before {
+  content: "\f148";
+}
+.schoolna-sid-announcment-icon:before {
+  content: "\f149";
+}
+.schoolna-sid-attendance-icon:before {
+  content: "\f14a";
+}
+.schoolna-sid-billing-icon:before {
+  content: "\f14b";
+}
+.schoolna-sid-complaints-icon:before {
+  content: "\f14c";
+}
+.schoolna-sid-disclipline-icon:before {
+  content: "\f14d";
+}
+.schoolna-sid-grade-book:before {
+  content: "\f14e";
+}
+.schoolna-sid-home-icon:before {
+  content: "\f14f";
+}
+.schoolna-sid-home-svg:before {
+  content: "\f150";
+}
+.schoolna-sid-letters-icon:before {
+  content: "\f151";
+}
+.schoolna-sid-library-icon:before {
+  content: "\f152";
+}
+.schoolna-sid-merits-icon:before {
+  content: "\f153";
+}
+.schoolna-sid-notification-icon:before {
+  content: "\f154";
+}
+.schoolna-sid-parant-meeting:before {
+  content: "\f155";
+}
+.schoolna-sid-registration-icon:before {
+  content: "\f156";
+}
+.schoolna-sid-scheduling-icon:before {
+  content: "\f157";
+}
+.schoolna-sid-setiing-icon:before {
+  content: "\f158";
+}
+.schoolna-sid-transportation-icon:before {
+  content: "\f159";
+}
+.schoolna-sid-users-icon:before {
+  content: "\f15a";
+}
+.schoolna-tran-bus-attendance:before {
+  content: "\f15b";
+}
+.schoolna-tran-bus-comments:before {
+  content: "\f15c";
+}
+.schoolna-tran-buses:before {
+  content: "\f15d";
+}
+.schoolna-tran-bus-registrations:before {
+  content: "\f15e";
+}
+.schoolna-tran-bus-registrations-groups:before {
+  content: "\f15f";
+}
+.schoolna-tran-bus-size:before {
+  content: "\f160";
+}
+.schoolna-tran-bus-student:before {
+  content: "\f161";
+}
+.schoolna-tran-bus-type:before {
+  content: "\f162";
+}
+.schoolna-tran-discipline:before {
+  content: "\f163";
+}
+.schoolna-tran-parents-pickup-requests:before {
+  content: "\f164";
+}
+.schoolna-tran-printing:before {
+  content: "\f165";
+}
+.schoolna-tran-routes:before {
+  content: "\f166";
+}
+.schoolna-tran-stop-type:before {
+  content: "\f167";
+}
+.schoolna-tran-student-transfers:before {
+  content: "\f168";
+}
+.schoolna-tran-trips-request:before {
+  content: "\f169";
+}
+.schoolna-tran-trips:before {
+  content: "\f16a";
+}
+.schoolna-adm-admission-report-icon:before {
+  content: "\f16b";
+}
+.schoolna-adm-admission-users-icon:before {
+  content: "\f16c";
+}
+.schoolna-adm-interviews-results-icon:before {
+  content: "\f16d";
+}
+.schoolna-adm-new-students-report-icon:before {
+  content: "\f16e";
+}
+.schoolna-adm-required-papers-icon:before {
+  content: "\f16f";
+}
+.schoolna-adm-school-age-criteria-icon:before {
+  content: "\f170";
+}
+.schoolna-adm-tests-icon:before {
+  content: "\f171";
+}
+.schoolna-adm-tests-requests-icon:before {
+  content: "\f172";
+}
+.schoolna-adm-waiting-list-icon:before {
+  content: "\f173";
+}

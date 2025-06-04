@@ -1,0 +1,2189 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <!-- Bootstrap rtl CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.rtlcss.com/bootstrap/v4.1.3/css/bootstrap.min.css"
+      integrity="sha384-Jt6Tol1A2P9JBesGeCxNrxkmRFSjWCBW1Af7CSQSKsfMVQCqnUVWhZzG0puJMCK6"
+      crossorigin="anonymous"
+    />
+    <!-- icons -->
+    <link rel="stylesheet" href="./assets/fonts/preview/preview.css" />
+    <link rel="stylesheet" href="./assets/fonts/css/styles.min.css" />
+    <script src="./assets/fonts/preview/zepto.min.js"></script>
+    <script src="./assets/fonts/preview/preview.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/custom.css" />
+
+    <!-- FontAwesome 5.9.0 CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- aside -->
+    <aside>
+      <div
+        class="d-flex flex-column align-items-center align-items-sm-start h-100 aside_content"
+      >
+        <a href="/" class="d-flex align-items-center w-100">
+          <span class="aside_logo mx-auto"
+            ><img src="./assets/images/main_logo.svg" class="img"
+          /></span>
+        </a>
+        <ul class="aside_menu custom-ul nav nav-pills w-100" id="menu">
+          <!-- add aside_active class to active parent-nav-item  -->
+          <li class="parent-nav-item">
+            <i class="fs-24 schoolna-sid-home-icon"></i>
+            <h6 class="title fs-12 custom-h">الرئيسية</h6>
+          </li>
+          <li class="parent-nav-item">
+            <i class="fas fa-search"></i>
+            <!-- fas fa-chevron-down -->
+            <h6 class="title fs-12 custom-h">بحث</h6>
+            <div class="child-nav-item">
+              <h4 class="title custom-h">بحث</h4>
+              <!-- sub category content -->
+              <ul class="accordion custom-ul" id="accordionExample">
+                <li class="position-relative">
+                  <input
+                    type="search"
+                    id="searchInput"
+                    class="w-100"
+                    placeholder="بحث"
+                  />
+                  <img
+                    src="./assets/images/icons/Search.svg"
+                    class="search-icon position-absolute"
+                  />
+                </li>
+                <ul id="searchResults" class="custom-ul"></ul>
+              </ul>
+            </div>
+          </li>
+          <li class="parent-nav-item aside_active">
+            <i class="fs-24 schoolna-sid-billing-icon"></i>
+            <h6 class="title fs-12 custom-h">إدارة الأكاديمية</h6>
+            <div class="child-nav-item">
+              <h4 class="title custom-h">ادارة الاكاديمية</h4>
+              <!-- sub category content -->
+              <ul class="accordion custom-ul" id="accordionExample">
+                <div class="card">
+                  <div class="card-header" id="headingOne">
+                    <button
+                      class="btn btn-link w-100"
+                      data-toggle="collapse"
+                      data-target="#collapseOne"
+                      aria-expanded="true"
+                      aria-controls="collapseOne"
+                    >
+                      <h6 class="child-title fw-700 custom-h">
+                        المحتوي الكاديمي
+                      </h6>
+                    </button>
+                  </div>
+                  <div
+                    id="collapseOne"
+                    class="collapse show"
+                    aria-labelledby="headingOne"
+                  >
+                    <div class="card-body">
+                      <ul class="custom-ul">
+                        <li
+                          class="d-flex align-items-center justify-content-between"
+                        >
+                          <h6 class="fw-500 custom-h">الخطط الأسبوعية</h6>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="22"
+                            height="23"
+                            viewBox="0 0 22 23"
+                            fill="none"
+                          >
+                            <path
+                              d="M16.6477 2.35962L16.2956 3.74617C18.7979 5.41978 20.448 8.27143 20.448 11.5004C20.448 16.57 16.3805 20.7098 11.3352 20.8199L10.2619 22.1478C10.5463 22.1713 10.8342 22.183 11.1258 22.183C17.0169 22.183 21.8093 17.3896 21.8093 11.4995C21.8093 7.6278 19.7412 4.23182 16.6495 2.35871L16.6477 2.35962ZM1.80178 11.5004C1.80178 6.42901 5.87298 2.29011 10.9164 2.17908L11.987 0.8521C11.7026 0.82863 11.4147 0.816895 11.1249 0.816895C5.23477 0.816895 0.441406 5.60845 0.441406 11.5004C0.441406 15.3721 2.51221 18.7681 5.60307 20.6412L5.95422 19.2528C3.45192 17.5792 1.80178 14.7294 1.80178 11.5004Z"
+                              fill="#E3E3E3"
+                            />
+                            <path
+                              d="M17.8081 9.86836C17.6925 9.62644 17.4632 9.48201 17.196 9.48201H13.3397L15.5269 0.850347C15.5811 0.636406 15.5432 0.436909 15.4159 0.274422C15.2823 0.102908 15.0729 0 14.8553 0C14.654 0 14.4753 0.088465 14.3399 0.256368L4.52657 12.4113C4.35776 12.6198 4.32617 12.8888 4.44171 13.1307C4.55545 13.3691 4.79106 13.5171 5.05465 13.5171H8.9101L6.72285 22.1497C6.66868 22.3636 6.7066 22.5631 6.83388 22.7265C6.96658 22.898 7.176 23 7.39355 23C7.59486 23 7.77359 22.9115 7.9099 22.7427L17.7232 10.5878C17.8893 10.3829 17.9218 10.1067 17.8072 9.86836H17.8081Z"
+                              fill="#E3E3E3"
+                            />
+                          </svg>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="headingTwo">
+                    <button
+                      class="btn btn-link w-100"
+                      data-toggle="collapse"
+                      data-target="#collapseTwo"
+                      aria-expanded="true"
+                      aria-controls="collapseTwo"
+                    >
+                      <h6 class="child-title fw-700 custom-h">الدرجات</h6>
+                    </button>
+                  </div>
+                  <div
+                    id="collapseTwo"
+                    class="collapse show"
+                    aria-labelledby="headingTwo"
+                  >
+                    <div class="card-body">
+                      <ul class="sub_category_list custom-ul">
+                        <li
+                          class="d-flex align-items-center justify-content-between"
+                        >
+                          <h6 class="fw-500 custom-h">دفتر الدرجات</h6>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="22"
+                            height="23"
+                            viewBox="0 0 22 23"
+                            fill="none"
+                          >
+                            <path
+                              d="M16.6477 2.35962L16.2956 3.74617C18.7979 5.41978 20.448 8.27143 20.448 11.5004C20.448 16.57 16.3805 20.7098 11.3352 20.8199L10.2619 22.1478C10.5463 22.1713 10.8342 22.183 11.1258 22.183C17.0169 22.183 21.8093 17.3896 21.8093 11.4995C21.8093 7.6278 19.7412 4.23182 16.6495 2.35871L16.6477 2.35962ZM1.80178 11.5004C1.80178 6.42901 5.87298 2.29011 10.9164 2.17908L11.987 0.8521C11.7026 0.82863 11.4147 0.816895 11.1249 0.816895C5.23477 0.816895 0.441406 5.60845 0.441406 11.5004C0.441406 15.3721 2.51221 18.7681 5.60307 20.6412L5.95422 19.2528C3.45192 17.5792 1.80178 14.7294 1.80178 11.5004Z"
+                              fill="#E3E3E3"
+                            />
+                            <path
+                              d="M17.8081 9.86836C17.6925 9.62644 17.4632 9.48201 17.196 9.48201H13.3397L15.5269 0.850347C15.5811 0.636406 15.5432 0.436909 15.4159 0.274422C15.2823 0.102908 15.0729 0 14.8553 0C14.654 0 14.4753 0.088465 14.3399 0.256368L4.52657 12.4113C4.35776 12.6198 4.32617 12.8888 4.44171 13.1307C4.55545 13.3691 4.79106 13.5171 5.05465 13.5171H8.9101L6.72285 22.1497C6.66868 22.3636 6.7066 22.5631 6.83388 22.7265C6.96658 22.898 7.176 23 7.39355 23C7.59486 23 7.77359 22.9115 7.9099 22.7427L17.7232 10.5878C17.8893 10.3829 17.9218 10.1067 17.8072 9.86836H17.8081Z"
+                              fill="#E3E3E3"
+                            />
+                          </svg>
+                        </li>
+                        <li
+                          class="d-flex align-items-center justify-content-between"
+                        >
+                          <h6 class="fw-500 custom-h">
+                            اعداد التقديرات فى دفتر الدرجات
+                          </h6>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="22"
+                            height="23"
+                            viewBox="0 0 22 23"
+                            fill="none"
+                          >
+                            <path
+                              d="M16.6477 2.35962L16.2956 3.74617C18.7979 5.41978 20.448 8.27143 20.448 11.5004C20.448 16.57 16.3805 20.7098 11.3352 20.8199L10.2619 22.1478C10.5463 22.1713 10.8342 22.183 11.1258 22.183C17.0169 22.183 21.8093 17.3896 21.8093 11.4995C21.8093 7.6278 19.7412 4.23182 16.6495 2.35871L16.6477 2.35962ZM1.80178 11.5004C1.80178 6.42901 5.87298 2.29011 10.9164 2.17908L11.987 0.8521C11.7026 0.82863 11.4147 0.816895 11.1249 0.816895C5.23477 0.816895 0.441406 5.60845 0.441406 11.5004C0.441406 15.3721 2.51221 18.7681 5.60307 20.6412L5.95422 19.2528C3.45192 17.5792 1.80178 14.7294 1.80178 11.5004Z"
+                              fill="#E3E3E3"
+                            />
+                            <path
+                              d="M17.8081 9.86836C17.6925 9.62644 17.4632 9.48201 17.196 9.48201H13.3397L15.5269 0.850347C15.5811 0.636406 15.5432 0.436909 15.4159 0.274422C15.2823 0.102908 15.0729 0 14.8553 0C14.654 0 14.4753 0.088465 14.3399 0.256368L4.52657 12.4113C4.35776 12.6198 4.32617 12.8888 4.44171 13.1307C4.55545 13.3691 4.79106 13.5171 5.05465 13.5171H8.9101L6.72285 22.1497C6.66868 22.3636 6.7066 22.5631 6.83388 22.7265C6.96658 22.898 7.176 23 7.39355 23C7.59486 23 7.77359 22.9115 7.9099 22.7427L17.7232 10.5878C17.8893 10.3829 17.9218 10.1067 17.8072 9.86836H17.8081Z"
+                              fill="#E3E3E3"
+                            />
+                          </svg>
+                        </li>
+                        <li
+                          class="d-flex align-items-center justify-content-between"
+                        >
+                          <h6 class="fw-500 custom-h">العوامل</h6>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="22"
+                            height="23"
+                            viewBox="0 0 22 23"
+                            fill="none"
+                          >
+                            <path
+                              d="M16.6477 2.35962L16.2956 3.74617C18.7979 5.41978 20.448 8.27143 20.448 11.5004C20.448 16.57 16.3805 20.7098 11.3352 20.8199L10.2619 22.1478C10.5463 22.1713 10.8342 22.183 11.1258 22.183C17.0169 22.183 21.8093 17.3896 21.8093 11.4995C21.8093 7.6278 19.7412 4.23182 16.6495 2.35871L16.6477 2.35962ZM1.80178 11.5004C1.80178 6.42901 5.87298 2.29011 10.9164 2.17908L11.987 0.8521C11.7026 0.82863 11.4147 0.816895 11.1249 0.816895C5.23477 0.816895 0.441406 5.60845 0.441406 11.5004C0.441406 15.3721 2.51221 18.7681 5.60307 20.6412L5.95422 19.2528C3.45192 17.5792 1.80178 14.7294 1.80178 11.5004Z"
+                              fill="#E3E3E3"
+                            />
+                            <path
+                              d="M17.8081 9.86836C17.6925 9.62644 17.4632 9.48201 17.196 9.48201H13.3397L15.5269 0.850347C15.5811 0.636406 15.5432 0.436909 15.4159 0.274422C15.2823 0.102908 15.0729 0 14.8553 0C14.654 0 14.4753 0.088465 14.3399 0.256368L4.52657 12.4113C4.35776 12.6198 4.32617 12.8888 4.44171 13.1307C4.55545 13.3691 4.79106 13.5171 5.05465 13.5171H8.9101L6.72285 22.1497C6.66868 22.3636 6.7066 22.5631 6.83388 22.7265C6.96658 22.898 7.176 23 7.39355 23C7.59486 23 7.77359 22.9115 7.9099 22.7427L17.7232 10.5878C17.8893 10.3829 17.9218 10.1067 17.8072 9.86836H17.8081Z"
+                              fill="#E3E3E3"
+                            />
+                          </svg>
+                        </li>
+                        <li
+                          class="d-flex align-items-center justify-content-between"
+                        >
+                          <h6 class="fw-500 custom-h">الاعمدة</h6>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="22"
+                            height="23"
+                            viewBox="0 0 22 23"
+                            fill="none"
+                          >
+                            <path
+                              d="M16.6477 2.35962L16.2956 3.74617C18.7979 5.41978 20.448 8.27143 20.448 11.5004C20.448 16.57 16.3805 20.7098 11.3352 20.8199L10.2619 22.1478C10.5463 22.1713 10.8342 22.183 11.1258 22.183C17.0169 22.183 21.8093 17.3896 21.8093 11.4995C21.8093 7.6278 19.7412 4.23182 16.6495 2.35871L16.6477 2.35962ZM1.80178 11.5004C1.80178 6.42901 5.87298 2.29011 10.9164 2.17908L11.987 0.8521C11.7026 0.82863 11.4147 0.816895 11.1249 0.816895C5.23477 0.816895 0.441406 5.60845 0.441406 11.5004C0.441406 15.3721 2.51221 18.7681 5.60307 20.6412L5.95422 19.2528C3.45192 17.5792 1.80178 14.7294 1.80178 11.5004Z"
+                              fill="#E3E3E3"
+                            />
+                            <path
+                              d="M17.8081 9.86836C17.6925 9.62644 17.4632 9.48201 17.196 9.48201H13.3397L15.5269 0.850347C15.5811 0.636406 15.5432 0.436909 15.4159 0.274422C15.2823 0.102908 15.0729 0 14.8553 0C14.654 0 14.4753 0.088465 14.3399 0.256368L4.52657 12.4113C4.35776 12.6198 4.32617 12.8888 4.44171 13.1307C4.55545 13.3691 4.79106 13.5171 5.05465 13.5171H8.9101L6.72285 22.1497C6.66868 22.3636 6.7066 22.5631 6.83388 22.7265C6.96658 22.898 7.176 23 7.39355 23C7.59486 23 7.77359 22.9115 7.9099 22.7427L17.7232 10.5878C17.8893 10.3829 17.9218 10.1067 17.8072 9.86836H17.8081Z"
+                              fill="#E3E3E3"
+                            />
+                          </svg>
+                        </li>
+                        <!-- add aside_active class to active sub category li -->
+                        <li
+                          class="d-flex align-items-center justify-content-between aside_active"
+                        >
+                          <h6 class="fw-500 custom-h">تقارير دفتر الدرجات</h6>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="22"
+                            height="23"
+                            viewBox="0 0 22 23"
+                            fill="none"
+                          >
+                            <path
+                              d="M16.6477 2.35962L16.2956 3.74617C18.7979 5.41978 20.448 8.27143 20.448 11.5004C20.448 16.57 16.3805 20.7098 11.3352 20.8199L10.2619 22.1478C10.5463 22.1713 10.8342 22.183 11.1258 22.183C17.0169 22.183 21.8093 17.3896 21.8093 11.4995C21.8093 7.6278 19.7412 4.23182 16.6495 2.35871L16.6477 2.35962ZM1.80178 11.5004C1.80178 6.42901 5.87298 2.29011 10.9164 2.17908L11.987 0.8521C11.7026 0.82863 11.4147 0.816895 11.1249 0.816895C5.23477 0.816895 0.441406 5.60845 0.441406 11.5004C0.441406 15.3721 2.51221 18.7681 5.60307 20.6412L5.95422 19.2528C3.45192 17.5792 1.80178 14.7294 1.80178 11.5004Z"
+                              fill="#E3E3E3"
+                            />
+                            <path
+                              d="M17.8081 9.86836C17.6925 9.62644 17.4632 9.48201 17.196 9.48201H13.3397L15.5269 0.850347C15.5811 0.636406 15.5432 0.436909 15.4159 0.274422C15.2823 0.102908 15.0729 0 14.8553 0C14.654 0 14.4753 0.088465 14.3399 0.256368L4.52657 12.4113C4.35776 12.6198 4.32617 12.8888 4.44171 13.1307C4.55545 13.3691 4.79106 13.5171 5.05465 13.5171H8.9101L6.72285 22.1497C6.66868 22.3636 6.7066 22.5631 6.83388 22.7265C6.96658 22.898 7.176 23 7.39355 23C7.59486 23 7.77359 22.9115 7.9099 22.7427L17.7232 10.5878C17.8893 10.3829 17.9218 10.1067 17.8072 9.86836H17.8081Z"
+                              fill="#E3E3E3"
+                            />
+                          </svg>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </ul>
+            </div>
+          </li>
+          <li class="parent-nav-item">
+            <i class="fs-24 schoolna-sid-admission-icon"></i>
+            <h6 class="title fs-12 custom-h">التسجيل والقبول</h6>
+          </li>
+          <li class="parent-nav-item">
+            <i class="fs-24 schoolna-sid-billing-icon"></i>
+            <h6 class="title fs-12 custom-h">الإدارة المالية</h6>
+          </li>
+          <li class="parent-nav-item">
+            <i class="fs-24 schoolna-set-teacers-icon"></i>
+            <h6 class="title fs-12 custom-h">التقييم والسلوك</h6>
+          </li>
+          <li class="parent-nav-item">
+            <i class="fs-24 schoolna-sid-library-icon"></i>
+            <h6 class="title fs-12 custom-h">المكتبة</h6>
+          </li>
+          <li class="parent-nav-item">
+            <i class="fs-24 schoolna-sid-transportation-icon"></i>
+            <h6 class="title fs-12 custom-h">وسائل النقل</h6>
+          </li>
+          <li class="parent-nav-item">
+            <i class="fs-24 schoolna-sid-notification-icon"></i>
+            <h6 class="title fs-12 custom-h">التواصل</h6>
+          </li>
+          <li class="parent-nav-item">
+            <i class="fs-24 schoolna-sid-setiing-icon"></i>
+            <h6 class="title fs-12 custom-h">الإعدادات</h6>
+          </li>
+          <li class="parent-nav-item">
+            <i class="fs-24 schoolna-dis-report-icon"></i>
+            <h6 class="title fs-12 custom-h">التقارير</h6>
+          </li>
+        </ul>
+        <!-- <div class="d-flex align-items-start justify-content-end flex-column w-100 aside_footer_img mt-5">
+                <img class="mx-auto" src="./assets/images/icons/question.svg">
+                <img class="mx-auto" src="./assets/images/icons/lang.svg">
+                <div class="aside-divider"></div>
+            </div> -->
+        <div
+          class="d-flex align-items-start justify-content-end flex-column w-100 aside_footer_img mt-5"
+        >
+          <img class="mx-auto" src="./assets/images/icons/question.svg" />
+          <img class="mx-auto" src="./assets/images/icons/lang.svg" />
+          <div class="aside-divider"></div>
+          <span class="aside_footer_logo"
+            ><img src="./assets/images/footerlogo.svg" class="mx-auto"
+          /></span>
+        </div>
+      </div>
+    </aside>
+    <main class="main-padding">
+      <!-- header -->
+      <header class="top-bar main-padding">
+        <select name="schools" id="schools">
+          <option value="volvo">مدارس الخليج - فرع الرياض</option>
+          <option value="saab">Saab</option>
+          <option value="opel">Opel</option>
+          <option value="audi">Audi</option>
+        </select>
+
+        <div
+          class="d-flex justify-content-between align-items-center mx-content"
+        >
+          <div class="dropdown user-controls">
+            <div>
+              <button
+                class="explore-button header_icon dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <img src="./assets/images/icons/heart.svg" class="icon-lg" />
+                <span class="indicator" aria-hidden="true">12</span>
+              </button>
+              <ul
+                class="dropdown-menu custom-ul"
+                aria-labelledby="dropdownMenuButton"
+              >
+                <li class="dropdown-item">
+                  <h6 class="third-color custom-h">الحالة الاجتماعية</h6>
+                  <img src="./assets/images/icons/close-circle.svg" />
+                </li>
+                <li class="dropdown-item">
+                  <h6 class="third-color custom-h">الحالة الاجتماعية</h6>
+                  <img src="./assets/images/icons/close-circle.svg" />
+                </li>
+                <li class="dropdown-item">
+                  <h6 class="third-color custom-h">الحالة الاجتماعية</h6>
+                  <img src="./assets/images/icons/close-circle.svg" />
+                </li>
+                <li class="dropdown-item">
+                  <h6 class="third-color custom-h">الحالة الاجتماعية</h6>
+                  <img src="./assets/images/icons/close-circle.svg" />
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <button
+                class="notifications-button header_icon dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <img src="./assets/images/icons/Bell.svg" class="icon-lg" />
+                <span class="indicator" aria-hidden="true">2</span>
+              </button>
+              <ul
+                class="dropdown-menu custom-ul"
+                aria-labelledby="dropdownMenuButton"
+              >
+                <li class="dropdown-item">
+                  <h6 class="primary custom-h">الحالة الاجتماعية</h6>
+                  <img src="./assets/images/icons/close-circle.svg" />
+                </li>
+                <li class="dropdown-item">
+                  <h6 class="primary custom-h">الحالة الاجتماعية</h6>
+                  <img src="./assets/images/icons/close-circle.svg" />
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="dropdown user-profile">
+            <button
+              class="btn dropdown-toggle bg-white d-flex align-items-center gap-1 p-0"
+              type="button"
+              id="dropdownMenuButton"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <h6
+                class="user-name secondary text-nowrap d-none d-md-block custom-h"
+              >
+                محمد بن حمد الشهراني
+              </h6>
+              <div class="text-nowrap">
+                <img
+                  src="https://github.com/mdo.png"
+                  alt="hugenerd"
+                  width="40"
+                  height="40"
+                  class="rounded-circle mx-1 mx-md-2"
+                />
+                <i class="fas fa-chevron-down"></i>
+              </div>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">تسجيل خروج</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="content">
+        <div class="add-new">
+          <div class="add-new">
+            <div class="heading">
+              <h1 class="title p-3">إضافة مستجد</h1>
+              <div class="steps">
+                <ul class="nav nav-tabs stepsTabs flex p-3" role="tablist">
+                  <li class="nav-item">
+                    <a
+                      class="nav-link active flex"
+                      data-toggle="tab"
+                      href="#studentInfo"
+                      role="tab"
+                    >
+                      <span class="step-icon flex"
+                        ><i class="far fa-user"></i
+                      ></span>
+                      <span class="step-title">بيانات الطالب</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link flex"
+                      data-toggle="tab"
+                      href="#parentInfo"
+                      role="tab"
+                    >
+                      <span class="step-icon flex"
+                        ><i class="far fa-user-circle"></i
+                      ></span>
+                      <span class="step-title">بيانات ولي الأمر</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link flex"
+                      data-toggle="tab"
+                      href="#otherInfo"
+                      role="tab"
+                      ><span class="step-icon flex"
+                        ><i class="fas fa-info-circle"></i
+                      ></span>
+                      <span class="step-title"> معلومات أخري ( اختياري )</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="tab-content">
+              <div
+                class="tab-pane show active"
+                id="studentInfo"
+                role="tabpanel"
+              >
+                <div class="accordion" id="accordionStudent">
+                  <div class="accordion-item">
+                    <div class="acoordion-header">
+                      <h2 class="cutom-h accordion-title">
+                        <button
+                          class="custom-btn flex"
+                          type="button"
+                          data-toggle="collapse"
+                          data-target="#collapseOne"
+                          aria-expanded="true"
+                          aria-controls="collapseOne"
+                        >
+                          <span class="required">بيانات الطالب</span>
+                        </button>
+                      </h2>
+                    </div>
+
+                    <div
+                      id="collapseOne"
+                      class="collapse show"
+                      data-parent="#accordionStudent"
+                    >
+                      <div class="accordion-body">
+                        <form action="">
+                          <div class="row">
+                            <div class="col-md-6 col-lg-4">
+                              <div class="form-group">
+                                <label for="s-year" class="form-label required"
+                                  >العام الدراسي</label
+                                >
+                                <select class="form-control" id="s-year">
+                                  <option selected disabled>
+                                    تحديد العام الدراسي
+                                  </option>
+                                  <option>2020</option>
+                                  <option>2021</option>
+                                  <option>2022</option>
+                                  <option>2023</option>
+                                  <option>2024</option>
+                                  <option>2025</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <div class="form-group">
+                                <label class="form-label required">الجنس</label>
+                                <div class="gender custom-radio">
+                                  <span class="text-muted">اختر</span>
+                                  <div class="flex radio-group">
+                                    <div class="form-check form-check-inline">
+                                      <input
+                                        class="form-check-input"
+                                        type="radio"
+                                        name="gender"
+                                        id="male"
+                                        checked
+                                      />
+                                      <label class="form-check-label" for="male"
+                                        >ذكر</label
+                                      >
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                      <input
+                                        class="form-check-input"
+                                        type="radio"
+                                        id="female"
+                                        name="gender"
+                                      />
+                                      <label
+                                        class="form-check-label"
+                                        for="female"
+                                        >أنثى</label
+                                      >
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <div class="form-group">
+                                <label for="s-grade" class="form-label required"
+                                  >الصف الدراسي المتقدم له</label
+                                >
+                                <select
+                                  class="form-control"
+                                  name="grade"
+                                  id="s-grade"
+                                >
+                                  <option selected disabled>
+                                    تحديد الصف الدراسي
+                                  </option>
+                                  <option>الاول</option>
+                                  <option>الثاني</option>
+                                  <option>الثالث</option>
+                                  <option>الرابع</option>
+                                  <option>الخامس</option>
+                                  <option>السادس</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <label
+                                for="s-birthdate"
+                                class="form-label required"
+                                >تاريخ الميلاد</label
+                              >
+                              <input
+                                type="date"
+                                class="form-control"
+                                name="date"
+                                id="s-birthdate"
+                                placeholder="اختر التاريخ"
+                              />
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <div class="form-group">
+                                <label for="s-age" class="form-label required"
+                                  >السن</label
+                                >
+                                <input
+                                  type="number"
+                                  name="age"
+                                  id="s-age"
+                                  class="form-control"
+                                  placeholder="حدد السن"
+                                />
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <div class="form-group">
+                                <label
+                                  for="s-first-name-ar"
+                                  class="form-label required"
+                                  >الإسم الأول عربي</label
+                                >
+                                <input
+                                  type="text"
+                                  name="first-name-ar"
+                                  id="s-first-name-ar"
+                                  class="form-control"
+                                  placeholder="ادخل الإسم الأول عربي"
+                                />
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <div class="form-group">
+                                <label
+                                  for="s-first-name-en"
+                                  class="form-label required"
+                                  >الإسم الأول إنجليزي</label
+                                >
+                                <input
+                                  type="text"
+                                  name="first-name-en"
+                                  id="s-first-name-en"
+                                  class="form-control"
+                                  placeholder="ادخل الإسم الأول إنجليزي"
+                                />
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <div class="form-group">
+                                <label class="form-label required"
+                                  >الجنسية</label
+                                >
+                                <div class="nationality custom-radio">
+                                  <span class="text-muted">اختر</span>
+                                  <div class="flex radio-group">
+                                    <div class="form-check form-check-inline">
+                                      <input
+                                        class="form-check-input"
+                                        type="radio"
+                                        name="nationality"
+                                        id="specified"
+                                        checked
+                                      />
+                                      <label
+                                        class="form-check-label"
+                                        for="specified"
+                                        >محدد الجنسية</label
+                                      >
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                      <input
+                                        class="form-check-input"
+                                        type="radio"
+                                        name="nationality"
+                                        id="unspecified"
+                                      />
+                                      <label
+                                        class="form-check-label"
+                                        for="unspecified"
+                                        >غير محدد الجنسية</label
+                                      >
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <div class="form-group">
+                                <label
+                                  for="s-nationality-select"
+                                  class="form-label required"
+                                  >الجنسية</label
+                                >
+                                <select
+                                  class="form-control"
+                                  id="s-nationality-select"
+                                  name="nationality-select"
+                                >
+                                  <option selected disabled>حدد الحنسية</option>
+                                  <option>سعودي</option>
+                                  <option>كويتي</option>
+                                  <option>قطري</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <div class="form-group">
+                                <label
+                                  for="s-identity-type"
+                                  class="form-label required"
+                                  >نوع الهوية</label
+                                >
+                                <select
+                                  class="form-control"
+                                  id="s-identity-type"
+                                  name="identity-type"
+                                >
+                                  <option selected disabled>
+                                    أختر نوع الهوية
+                                  </option>
+                                  <option>نوع 1</option>
+                                  <option>نوع 2</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <div class="form-group">
+                                <label
+                                  for="s-identity-number"
+                                  class="form-label required"
+                                  >رقم الهوية</label
+                                >
+                                <input
+                                  type="text"
+                                  name="s-identity-number"
+                                  id="s-identity-number"
+                                  class="form-control"
+                                  placeholder="ادخل رقم الهوية"
+                                />
+                              </div>
+                            </div>
+                            <div class="col-12">
+                              <div class="form-group">
+                                <label class="form-label required"
+                                  >البطاقة المدنية للأب</label
+                                >
+
+                                <label class="custom-upload-area flex">
+                                  <span class="upload-icon flex">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                  </span>
+                                  <div class="desc flex">
+                                    <span>
+                                      اسحب وأفلت مستندًا أو
+                                      <mark>استعرضه</mark>
+                                    </span>
+                                    <span class="upload-note"
+                                      >الحد الأقصى الموصى به 1600 ميجابايت والحد
+                                      الأقصى 200 ميجابايت لكل ملف</span
+                                    >
+                                  </div>
+
+                                  <input
+                                    type="file"
+                                    accept="image/*,.pdf"
+                                    hidden
+                                    id="father-id-upload"
+                                  />
+                                </label>
+                                <div
+                                  id="file-preview"
+                                  class="file-preview"
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <div class="acoordion-header">
+                      <h2 class="cutom-h accordion-title">
+                        <button
+                          class="custom-btn flex"
+                          type="button"
+                          data-toggle="collapse"
+                          data-target="#collapseTwo"
+                          aria-expanded="false"
+                          aria-controls="collapseTwo"
+                        >
+                          معلومات إضافية
+                        </button>
+                      </h2>
+                    </div>
+
+                    <div
+                      id="collapseTwo"
+                      class="collapse"
+                      data-parent="#accordionStudent"
+                    >
+                      <div class="accordion-body">
+                        <form>
+                          <div class="row">
+                            <div class="col-md-6 col-lg-4">
+                              <div class="form-group">
+                                <label for="s-religion" class="form-label">
+                                  الديانة
+                                </label>
+                                <select
+                                  class="form-control"
+                                  name="religion"
+                                  id="s-religion"
+                                >
+                                  <option selected disabled>
+                                    تحديد الديانة
+                                  </option>
+                                  <option>مسلم</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <div class="form-group">
+                                <label
+                                  for="s-residence-number"
+                                  class="form-label"
+                                  >رقم الإقامة</label
+                                >
+                                <input
+                                  type="number"
+                                  name="residence-number"
+                                  id="s-residence-number"
+                                  class="form-control"
+                                  placeholder="ادخل رقم الإقامة"
+                                />
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <label for="s-residence-date" class="form-label"
+                                >تاريخ إنتهاء الإقامة
+                              </label>
+                              <input
+                                type="date"
+                                class="form-control"
+                                name="residence-date"
+                                id="s-residence-date"
+                                placeholder="حدد التاريخ"
+                              />
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <div class="form-group">
+                                <label
+                                  for="s-passport-number"
+                                  class="form-label"
+                                  >رقم جواز السفر</label
+                                >
+                                <input
+                                  type="number"
+                                  name="passport-number"
+                                  id="s-passport-number"
+                                  class="form-control"
+                                  placeholder="ادخل رقم جواز السفر"
+                                />
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <label for="s-passport-date" class="form-label"
+                                >تاريخ إنتهاء جواز السفر
+                              </label>
+                              <input
+                                type="date"
+                                class="form-control"
+                                name="passport-date"
+                                id="s-passport-date"
+                                placeholder="حدد التاريخ"
+                              />
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <div class="form-group">
+                                <label for="s-place-of-birth" class="form-label"
+                                  >مكان الميلاد</label
+                                >
+                                <input
+                                  type="number"
+                                  name="place-of-birth"
+                                  id="s-place-of-birth"
+                                  class="form-control"
+                                  placeholder="ادخل مكان الميلاد"
+                                />
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <div class="form-group">
+                                <label
+                                  for="s-place-of-issue"
+                                  class="form-label"
+                                >
+                                  مكان الإصدار</label
+                                >
+                                <input
+                                  type="text"
+                                  name="place-of-issue"
+                                  id="s-place-of-issue"
+                                  class="form-control"
+                                  placeholder="ادخل مكان الإصدار"
+                                />
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <div class="form-group">
+                                <label class="form-label"
+                                  >يعاني من أمراض مزمنة</label
+                                >
+                                <div class="diseases custom-radio">
+                                  <span class="text-muted">اختر</span>
+                                  <div class="flex radio-group">
+                                    <div class="form-check form-check-inline">
+                                      <input
+                                        class="form-check-input"
+                                        type="radio"
+                                        name="diseases"
+                                        id="d-yes"
+                                        checked
+                                      />
+                                      <label
+                                        class="form-check-label"
+                                        for="d-yes"
+                                      >
+                                        نعم</label
+                                      >
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                      <input
+                                        class="form-check-input"
+                                        type="radio"
+                                        name="diseases"
+                                        id="d-no"
+                                      />
+                                      <label
+                                        class="form-check-label"
+                                        for="d-no"
+                                      >
+                                        لا
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <div class="form-group">
+                                <label class="form-label"
+                                  >هل الطالب يتيم
+                                </label>
+                                <div class="orphan custom-radio">
+                                  <span class="text-muted">اختر</span>
+                                  <div class="flex radio-group">
+                                    <div class="form-check form-check-inline">
+                                      <input
+                                        class="form-check-input"
+                                        type="radio"
+                                        name="orphan"
+                                        id="o-yes"
+                                        checked
+                                      />
+                                      <label
+                                        class="form-check-label"
+                                        for="o-yes"
+                                      >
+                                        نعم</label
+                                      >
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                      <input
+                                        class="form-check-input"
+                                        type="radio"
+                                        name="orphan"
+                                        id="o-no"
+                                      />
+                                      <label
+                                        class="form-check-label"
+                                        for="o-no"
+                                      >
+                                        لا
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="step-btns flex">
+                  <div class="btn-group flex">
+                    <button class="custom-btn with-transparnt">
+                      حفظ وإغلاق
+                    </button>
+                    <button class="custom-btn with-background next-step">
+                      حغظ ومتابعة
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="parentInfo" role="tabpanel">
+                <div class="accordion" id="accordionParent">
+                  <div class="accordion-item">
+                    <div class="acoordion-header">
+                      <h2 class="cutom-h accordion-title">
+                        <button
+                          class="custom-btn flex"
+                          type="button"
+                          data-toggle="collapse"
+                          data-target="#collapseThree"
+                          aria-expanded="true"
+                          aria-controls="collapseThree"
+                        >
+                          <span class="required">بيانات ولي الأمر</span>
+                        </button>
+                      </h2>
+                    </div>
+
+                    <div
+                      id="collapseThree"
+                      class="collapse show"
+                      data-parent="#accordionParent"
+                    >
+                      <div class="accordion-body">
+                        <form action="">
+                          <div class="row">
+                            <div class="col-md-12 col-lg-6">
+                              <div class="form-group">
+                                <label class="form-label required"
+                                  >الإسم بالعربي</label
+                                >
+                                <div class="name-inputs flex">
+                                  <input
+                                    type="text"
+                                    name="first-name"
+                                    class="form-control"
+                                    placeholder="الإسم الاول"
+                                  />
+                                  <input
+                                    type="text"
+                                    name="second-name"
+                                    class="form-control"
+                                    placeholder="الاسم الثاني"
+                                  />
+                                  <input
+                                    type="text"
+                                    name="third-name"
+                                    class="form-control"
+                                    placeholder="الاسم الثالث"
+                                  />
+                                  <input
+                                    type="text"
+                                    name="fourth-name"
+                                    class="form-control"
+                                    placeholder="الاسم الرابع"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-12 col-lg-6">
+                              <div class="form-group">
+                                <label class="form-label required"
+                                  >الإسم بالإنجليزي</label
+                                >
+                                <div class="name-inputs flex">
+                                  <input
+                                    type="text"
+                                    name="first-name"
+                                    class="form-control"
+                                    placeholder="الإسم الاول"
+                                  />
+                                  <input
+                                    type="text"
+                                    name="second-name"
+                                    class="form-control"
+                                    placeholder="الاسم الثاني"
+                                  />
+                                  <input
+                                    type="text"
+                                    name="third-name"
+                                    class="form-control"
+                                    placeholder="الاسم الثالث"
+                                  />
+                                  <input
+                                    type="text"
+                                    name="fourth-name"
+                                    class="form-control"
+                                    placeholder="الاسم الرابع"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <div class="form-group">
+                                <label class="form-label required"
+                                  >الجنسية</label
+                                >
+                                <div class="nationality custom-radio">
+                                  <span class="text-muted">اختر</span>
+                                  <div class="flex radio-group">
+                                    <div class="form-check form-check-inline">
+                                      <input
+                                        class="form-check-input"
+                                        type="radio"
+                                        name="nationality"
+                                        id="specified"
+                                        checked
+                                      />
+                                      <label
+                                        class="form-check-label"
+                                        for="specified"
+                                        >محدد الجنسية</label
+                                      >
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                      <input
+                                        class="form-check-input"
+                                        type="radio"
+                                        name="nationality"
+                                        id="unspecified"
+                                      />
+                                      <label
+                                        class="form-check-label"
+                                        for="unspecified"
+                                        >غير محدد الجنسية</label
+                                      >
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <div class="form-group">
+                                <label
+                                  for="p-nationality-select"
+                                  class="form-label required"
+                                  >الجنسية</label
+                                >
+                                <select
+                                  class="form-control"
+                                  id="p-nationality-select"
+                                  name="nationality-select"
+                                >
+                                  <option selected disabled>حدد الحنسية</option>
+                                  <option>سعودي</option>
+                                  <option>كويتي</option>
+                                  <option>قطري</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <div class="form-group">
+                                <label
+                                  for="p-telephone"
+                                  class="form-label required"
+                                  >رقم الهاتف</label
+                                >
+                                <input
+                                  type="tel"
+                                  name="telephone"
+                                  id="p-telephone"
+                                  class="form-control"
+                                  placeholder="ادخل رقم الهاتف"
+                                />
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <div class="form-group">
+                                <label
+                                  for="p-identity-type"
+                                  class="form-label required"
+                                  >نوع الهوية</label
+                                >
+                                <select
+                                  class="form-control"
+                                  name="id-type"
+                                  id="p-identity-type"
+                                >
+                                  <option selected disabled>
+                                    أختر نوع الهوية
+                                  </option>
+                                  <option>نوع 1</option>
+                                  <option>نوع 2</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <div class="form-group">
+                                <label
+                                  for="p-identity-number"
+                                  class="form-label required"
+                                  >رقم الهوية</label
+                                >
+                                <input
+                                  type="text"
+                                  name="id-number"
+                                  id="p-identity-number"
+                                  class="form-control"
+                                  placeholder="ادخل رقم الهوية"
+                                />
+                              </div>
+                            </div>
+                            <div class="col-12">
+                              <div class="form-group">
+                                <label class="form-label required"
+                                  >البطاقة المدنية للأب</label
+                                >
+
+                                <label class="custom-upload-area flex">
+                                  <span class="upload-icon flex">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                  </span>
+                                  <div class="desc flex">
+                                    <span>
+                                      اسحب وأفلت مستندًا أو
+                                      <mark>استعرضه</mark>
+                                    </span>
+                                    <span class="upload-note"
+                                      >الحد الأقصى الموصى به 1600 ميجابايت والحد
+                                      الأقصى 200 ميجابايت لكل ملف</span
+                                    >
+                                  </div>
+
+                                  <input
+                                    type="file"
+                                    accept="image/*,.pdf"
+                                    hidden
+                                    id="father-id-upload"
+                                  />
+                                </label>
+                                <div
+                                  id="file-preview"
+                                  class="file-preview"
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <div class="acoordion-header">
+                      <h2 class="cutom-h accordion-title">
+                        <button
+                          class="custom-btn flex"
+                          type="button"
+                          data-toggle="collapse"
+                          data-target="#collapseFour"
+                          aria-expanded="false"
+                          aria-controls="collapseFour"
+                        >
+                          معلومات إضافية
+                        </button>
+                      </h2>
+                    </div>
+
+                    <div
+                      id="collapseFour"
+                      class="collapse"
+                      data-parent="#accordionParent"
+                    >
+                      <div class="accordion-body">
+                        <form action="">
+                          <div class="row">
+                            <div class="col-md-6 col-lg-4">
+                              <div class="form-group">
+                                <label
+                                  for="p-residence-number"
+                                  class="form-label"
+                                >
+                                  رقم الإقامة
+                                </label>
+                                <input
+                                  type="text"
+                                  name="residence-number"
+                                  id="p-residence-number"
+                                  class="form-control"
+                                  placeholder="ادخل رقم الإقامة"
+                                />
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <div class="form-group">
+                                <label
+                                  for="p-residence-date"
+                                  class="form-label"
+                                >
+                                  تاريخ إنتهاء الإقامة
+                                </label>
+                                <input
+                                  type="date"
+                                  name="residence-date"
+                                  id="p-residence-date"
+                                  class="form-control"
+                                  placeholder="حدد التاريخ"
+                                />
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <div class="form-group">
+                                <label
+                                  for="p-passport-number"
+                                  class="form-label"
+                                  >رقم جواز السفر</label
+                                >
+                                <input
+                                  type="number"
+                                  name="passport-number"
+                                  id="p-passport-number"
+                                  class="form-control"
+                                  placeholder="ادخل رقم جواز السفر"
+                                />
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <label for="p-passport-date" class="form-label"
+                                >تاريخ إنتهاء جواز السفر
+                              </label>
+                              <input
+                                type="date"
+                                class="form-control"
+                                id="p-passport-date"
+                                name="passport-date"
+                                placeholder="حدد التاريخ"
+                              />
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <div class="form-group">
+                                <label for="p-email" class="form-label">
+                                  البريد الإلكتروني
+                                </label>
+                                <input
+                                  type="email"
+                                  name="email"
+                                  id="p-email"
+                                  class="form-control"
+                                  placeholder=" ادخل البريد الإلكتروني"
+                                />
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <div class="form-group">
+                                <label
+                                  for="p-marital-select"
+                                  class="form-label"
+                                >
+                                  الحالة الإجتماعية
+                                </label>
+                                <select
+                                  class="form-control"
+                                  id="p-marital-select"
+                                  name="marital-select"
+                                >
+                                  <option selected disabled>
+                                    حدد الحالة الإجتماعية
+                                  </option>
+                                  <option>أعزب</option>
+                                  <option>متزوج</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <div class="form-group">
+                                <label for="p-empoloyee" class="form-label"
+                                  >هل أنت موظف في المدرسة
+                                </label>
+                                <div
+                                  class="empoloyee custom-radio"
+                                  id="p-empoloyee"
+                                >
+                                  <span class="text-muted">اختر</span>
+                                  <div class="flex radio-group">
+                                    <div class="form-check form-check-inline">
+                                      <input
+                                        class="form-check-input"
+                                        type="radio"
+                                        name="empoloyee"
+                                        id="e-yes"
+                                        checked
+                                      />
+                                      <label
+                                        class="form-check-label"
+                                        for="e-yes"
+                                      >
+                                        نعم</label
+                                      >
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                      <input
+                                        class="form-check-input"
+                                        type="radio"
+                                        name="empoloyee"
+                                        id="e-no"
+                                      />
+                                      <label
+                                        class="form-check-label"
+                                        for="e-no"
+                                      >
+                                        لا
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <div class="form-group">
+                                <label for="p-job" class="form-label">
+                                  المهنة
+                                </label>
+                                <input
+                                  type="text"
+                                  name="job"
+                                  class="form-control"
+                                  id="p-job"
+                                  placeholder="ادخل المهنة"
+                                />
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <div class="form-group">
+                                <label
+                                  for="p-job-place-select"
+                                  class="form-label"
+                                >
+                                  قطاع العمل
+                                </label>
+                                <select
+                                  class="form-control"
+                                  id="p-job-place-select"
+                                  name="job-place-select"
+                                >
+                                  <option selected disabled>
+                                    حدد قطاع العمل
+                                  </option>
+                                  <option>قطاع1</option>
+                                  <option>قطاع2</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="col-12">
+                              <div class="form-group">
+                                <label for="p-job-place" class="form-label">
+                                  مكان العمل
+                                </label>
+                                <input
+                                  type="text"
+                                  name="job-place"
+                                  id="p-job-place"
+                                  class="form-control"
+                                  placeholder="ادخل مكان العمل"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <div class="acoordion-header">
+                      <h2 class="cutom-h accordion-title">
+                        <button
+                          class="custom-btn flex"
+                          type="button"
+                          data-toggle="collapse"
+                          data-target="#collapseFive"
+                          aria-expanded="false"
+                          aria-controls="collapseFive"
+                        >
+                          <span class="required">الوصاية التعليمية</span>
+                        </button>
+                      </h2>
+                    </div>
+
+                    <div
+                      id="collapseFive"
+                      class="collapse"
+                      data-parent="#accordionParent"
+                    >
+                      <div class="accordion-body">
+                        <form action="">
+                          <div class="row">
+                            <div class="col-md-12 col-lg-6">
+                              <div class="form-group">
+                                <label
+                                  for="g-name-ar"
+                                  class="form-label required"
+                                  >الإسم بالعربي</label
+                                >
+                                <div class="name-inputs flex" id="g-name-ar">
+                                  <input
+                                    type="text"
+                                    name="first-name"
+                                    class="form-control"
+                                    placeholder="الإسم الاول"
+                                  />
+                                  <input
+                                    type="text"
+                                    name="second-name"
+                                    class="form-control"
+                                    placeholder="الاسم الثاني"
+                                  />
+                                  <input
+                                    type="text"
+                                    name="third-name"
+                                    class="form-control"
+                                    placeholder="الاسم الثالث"
+                                  />
+                                  <input
+                                    type="text"
+                                    name="fourth-name"
+                                    class="form-control"
+                                    placeholder="الاسم الرابع"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-12 col-lg-6">
+                              <div class="form-group">
+                                <label
+                                  for="g-name-en"
+                                  class="form-label required"
+                                  >الإسم بالإنجليزي</label
+                                >
+                                <div class="name-inputs flex" id="g-name-en">
+                                  <input
+                                    type="text"
+                                    name="first-name"
+                                    class="form-control"
+                                    placeholder="الإسم الاول"
+                                  />
+                                  <input
+                                    type="text"
+                                    name="second-name"
+                                    class="form-control"
+                                    placeholder="الاسم الثاني"
+                                  />
+                                  <input
+                                    type="text"
+                                    name="third-name"
+                                    class="form-control"
+                                    placeholder="الاسم الثالث"
+                                  />
+                                  <input
+                                    type="text"
+                                    name="fourth-name"
+                                    class="form-control"
+                                    placeholder="الاسم الرابع"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <div class="form-group">
+                                <label
+                                  for="g-nursery"
+                                  class="form-label required"
+                                  >الحضانة التعليمية</label
+                                >
+                                <select
+                                  class="form-control"
+                                  name="nursery"
+                                  id="g-nursery"
+                                >
+                                  <option selected disabled>
+                                    حدد الحضانة التعليمية
+                                  </option>
+                                  <option>الحضانة 1</option>
+                                  <option>الحضانة 2</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <div class="form-group">
+                                <label
+                                  for="g-nursery-relation"
+                                  class="form-label required"
+                                >
+                                  علاقة الحضانة التعليمة</label
+                                >
+                                <select
+                                  class="form-control"
+                                  id="g-nursery-relation"
+                                  name="nursery-relation"
+                                >
+                                  <option selected disabled>
+                                    حدد الحضانة التعليمية
+                                  </option>
+                                  <option>الحضانة 1</option>
+                                  <option>الحضانة 2</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <div class="form-group">
+                                <label
+                                  for="g-nationality-select"
+                                  class="form-label required"
+                                >
+                                  الجنسية</label
+                                >
+                                <select
+                                  class="form-control"
+                                  id="g-nationality-select"
+                                  name="nationality-select"
+                                >
+                                  <option selected disabled>حدد الجنسية</option>
+                                  <option>الجنسية 1</option>
+                                  <option>الجنسية 2</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <div class="form-group">
+                                <label
+                                  for="g-identity-number"
+                                  class="form-label required"
+                                  >رقم الهوية</label
+                                >
+                                <input
+                                  type="text"
+                                  name="id-number"
+                                  id="g-identity-number"
+                                  class="form-control"
+                                  placeholder="ادخل رقم الهوية"
+                                />
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <div class="form-group">
+                                <label
+                                  for="g-telephone"
+                                  class="form-label required"
+                                  >رقم الهاتف</label
+                                >
+                                <input
+                                  type="tel"
+                                  name="telephone"
+                                  id="g-telephone"
+                                  class="form-control"
+                                  placeholder="ادخل رقم الهاتف"
+                                />
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <div class="form-group">
+                                <label
+                                  for="g-email"
+                                  class="form-label required"
+                                >
+                                  البريد الإلكتروني</label
+                                >
+                                <input
+                                  type="email"
+                                  name="email"
+                                  id="g-email"
+                                  class="form-control"
+                                  placeholder="ادخل البريد الإلكتروني"
+                                />
+                              </div>
+                            </div>
+                            <div class="col-12">
+                              <div class="form-group">
+                                <label class="form-label required"
+                                  >البطاقة المدنية للواصي</label
+                                >
+
+                                <label class="custom-upload-area flex">
+                                  <span class="upload-icon flex">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                  </span>
+                                  <div class="desc flex">
+                                    <span>
+                                      اسحب وأفلت مستندًا أو
+                                      <mark>استعرضه</mark>
+                                    </span>
+                                    <span class="upload-note"
+                                      >الحد الأقصى الموصى به 1600 ميجابايت والحد
+                                      الأقصى 200 ميجابايت لكل ملف</span
+                                    >
+                                  </div>
+
+                                  <input
+                                    type="file"
+                                    accept="image/*,.pdf"
+                                    hidden
+                                    id="father-id-upload"
+                                  />
+                                </label>
+                                <div
+                                  id="file-preview"
+                                  class="file-preview"
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <div class="acoordion-header">
+                      <h2 class="cutom-h accordion-title">
+                        <button
+                          class="custom-btn flex"
+                          type="button"
+                          data-toggle="collapse"
+                          data-target="#collapseSix"
+                          aria-expanded="false"
+                          aria-controls="collapseSix"
+                        >
+                          معلومات إضافية للواصي
+                        </button>
+                      </h2>
+                    </div>
+
+                    <div
+                      id="collapseSix"
+                      class="collapse"
+                      data-parent="#accordionParent"
+                    >
+                      <div class="accordion-body">
+                        <form action="">
+                          <div class="row">
+                            <div class="col-md-6 col-lg-4">
+                              <div class="form-group">
+                                <label
+                                  for="g-marital-select"
+                                  class="form-label"
+                                >
+                                  الحالة الإجتماعية
+                                </label>
+                                <select
+                                  class="form-control"
+                                  id="g-marital-select"
+                                  name="marital-select"
+                                >
+                                  <option selected disabled>
+                                    حدد الحالة الإجتماعية
+                                  </option>
+                                  <option>أعزب</option>
+                                  <option>متزوج</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <div class="form-group">
+                                <label for="g-job" class="form-label">
+                                  المهنة
+                                </label>
+                                <input
+                                  type="text"
+                                  name="job"
+                                  id="g-job"
+                                  class="form-control"
+                                  placeholder="ادخل المهنة"
+                                />
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <div class="form-group">
+                                <label
+                                  for="g-job-place-select"
+                                  class="form-label"
+                                >
+                                  قطاع العمل
+                                </label>
+                                <select
+                                  class="form-control"
+                                  id="g-job-place-select"
+                                  name="job-place-select"
+                                >
+                                  <option selected disabled>
+                                    حدد قطاع العمل
+                                  </option>
+                                  <option>قطاع1</option>
+                                  <option>قطاع2</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="col-12">
+                              <div class="form-group">
+                                <label for="g-job-place" class="form-label">
+                                  مكان العمل
+                                </label>
+                                <input
+                                  type="text"
+                                  name="job-place"
+                                  id="g-job-place"
+                                  class="form-control"
+                                  placeholder="ادخل مكان العمل"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="step-btns flex">
+                  <button class="custom-btn with-transparnt prev-step">
+                    رجوع
+                  </button>
+                  <div class="btn-group">
+                    <button class="custom-btn with-transparnt">
+                      حفظ وإغلاق
+                    </button>
+                    <button class="custom-btn with-background next-step">
+                      حغظ ومتابعة
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="otherInfo" role="tabpanel">
+                <div class="accordion" id="accordionOther">
+                  <div class="accordion-item">
+                    <div class="acoordion-header">
+                      <h2 class="cutom-h accordion-title">
+                        <button
+                          class="custom-btn flex"
+                          type="button"
+                          data-toggle="collapse"
+                          data-target="#collapseSeven"
+                          aria-expanded="false"
+                          aria-controls="collapseSeven"
+                        >
+                          عنوان الطالب ( اختياري )
+                        </button>
+                      </h2>
+                    </div>
+
+                    <div
+                      id="collapseSeven"
+                      class="collapse"
+                      data-parent="#accordionOther"
+                    >
+                      <div class="accordion-body">
+                        <form action="">
+                          <div class="row">
+                            <div class="col-md-6 col-lg-4">
+                              <div class="form-group">
+                                <label for="s-area-select" class="form-label"
+                                  >المنطقة الإدارية</label
+                                >
+                                <select
+                                  class="form-control"
+                                  name="area-select"
+                                  id="s-area-select"
+                                >
+                                  <option selected disabled>
+                                    اختر المنطقة الإدارية
+                                  </option>
+                                  <option>المنطقة 1</option>
+                                  <option>المنطقة 2</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <div class="form-group">
+                                <label for="s-city-select" class="form-label">
+                                  المدينة / المحافظة</label
+                                >
+                                <select
+                                  class="form-control"
+                                  name="city-select"
+                                  id="s-city-select"
+                                >
+                                  <option selected disabled>
+                                    اختر المدينة / المحافظة
+                                  </option>
+                                  <option>المدينة 1</option>
+                                  <option>المدينة 2</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <div class="form-group">
+                                <label for="s-neighborhood" class="form-label">
+                                  الحي</label
+                                >
+                                <input
+                                  type="text"
+                                  name="neighborhood"
+                                  id="s-neighborhood"
+                                  class="form-control"
+                                  placeholder="ادخل الحي"
+                                />
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <div class="form-group">
+                                <label for="s-street" class="form-label">
+                                  الشارع</label
+                                >
+                                <input
+                                  type="text"
+                                  name="street"
+                                  id="s-street"
+                                  class="form-control"
+                                  placeholder="ادخل الشارع"
+                                />
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <div class="form-group">
+                                <label for="s-building" class="form-label">
+                                  المبني</label
+                                >
+                                <input
+                                  type="text"
+                                  name="building"
+                                  id="s-building"
+                                  class="form-control"
+                                  placeholder="ادخل المبني"
+                                />
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <div class="form-group">
+                                <label for="s-floor" class="form-label">
+                                  الدور</label
+                                >
+                                <input
+                                  type="text"
+                                  name="floor"
+                                  id="s-floor"
+                                  class="form-control"
+                                  placeholder="ادخل الدور"
+                                />
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <div class="form-group">
+                                <label for="s-apartment" class="form-label">
+                                  الشقة</label
+                                >
+                                <input
+                                  type="text"
+                                  name="apartment"
+                                  id="s-apartment"
+                                  class="form-control"
+                                  placeholder="ادخل الشقة"
+                                />
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-lg-8">
+                              <div class="form-group">
+                                <label for="s-description" class="form-label">
+                                  وصف إضافي</label
+                                >
+                                <input
+                                  type="text"
+                                  name="description"
+                                  id="s-description"
+                                  class="form-control"
+                                  placeholder="ادخل وصف"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <div class="acoordion-header">
+                      <h2 class="cutom-h accordion-title">
+                        <button
+                          class="custom-btn flex"
+                          type="button"
+                          data-toggle="collapse"
+                          data-target="#collapseEight"
+                          aria-expanded="true"
+                          aria-controls="collapseEight"
+                        >
+                          المدارس السابقة (اختياري)
+                        </button>
+                      </h2>
+                    </div>
+
+                    <div
+                      id="collapseEight"
+                      class="collapse show"
+                      data-parent="#accordionOther"
+                    >
+                      <div class="accordion-body">
+                        <form action="">
+                          <div class="row">
+                            <div class="col-md-6 col-lg-4">
+                              <div class="form-group">
+                                <label for="s-country-name" class="form-label">
+                                  اسم الدولة
+                                </label>
+                                <input
+                                  type="text"
+                                  name="country-name"
+                                  id="s-country-name"
+                                  class="form-control"
+                                  placeholder="ادخل  اسم الدولة"
+                                />
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <div class="form-group">
+                                <label for="s-school-name" class="form-label">
+                                  المدرسة السابقة
+                                </label>
+                                <select
+                                  class="form-control"
+                                  id="s-school-name"
+                                  name="school-select"
+                                >
+                                  <option selected disabled>
+                                    اختر المدرسة
+                                  </option>
+                                  <option>المدرسة 1</option>
+                                  <option>المدرسة 2</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <div class="form-group">
+                                <label for="s-academic-year" class="form-label">
+                                  العام الدراسي
+                                </label>
+                                <select
+                                  class="form-control"
+                                  id="s-academic-year"
+                                  name="job-place-select"
+                                >
+                                  <option selected disabled>
+                                    اختر العام الدراسي
+                                  </option>
+                                  <option>2024</option>
+                                  <option>2025</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <div class="form-group">
+                                <label
+                                  for="s-previous-grade"
+                                  class="form-label"
+                                >
+                                  الصف السابق
+                                </label>
+                                <select
+                                  class="form-control"
+                                  id="s-previous-grade"
+                                  name="previous-grade"
+                                >
+                                  <option selected disabled>اختر الصف</option>
+                                  <option>الرابع</option>
+                                  <option>الخامس</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <div class="form-group">
+                                <label for="s-stay-duration" class="form-label"
+                                  >مدة البقاء</label
+                                >
+                                <input
+                                  type="number"
+                                  name="stay-duration"
+                                  id="s-stay-duration"
+                                  class="form-control"
+                                  placeholder="ادخل المدة"
+                                />
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <div class="form-group">
+                                <label
+                                  for="s-academic-status"
+                                  class="form-label"
+                                >
+                                  حالة الطالب الأكاديمية
+                                </label>
+                                <select
+                                  class="form-control"
+                                  id="s-academic-status"
+                                  name="previous-grade"
+                                >
+                                  <option selected disabled>اختر الصف</option>
+                                  <option>الرابع</option>
+                                  <option>الخامس</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="col-12">
+                              <div class="add-new-school">
+                                <button class="add-school-btn custom-btn">
+                                  <i class="fas fa-plus"></i>
+                                  اضافة مدرسة
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <div class="acoordion-header">
+                      <h2 class="cutom-h accordion-title">
+                        <button
+                          class="custom-btn flex"
+                          type="button"
+                          data-toggle="collapse"
+                          data-target="#collapseNine"
+                          aria-expanded="false"
+                          aria-controls="collapseNine"
+                        >
+                          ملفات (اختياري)
+                        </button>
+                      </h2>
+                    </div>
+
+                    <div
+                      id="collapseNine"
+                      class="collapse"
+                      data-parent="#accordionOther"
+                    >
+                      <div class="accordion-body">
+                        <form action="">
+                          <div class="row">
+                            <div class="col-12">
+                              <div class="form-group">
+                                <label class="form-label"> ملفات أخري</label>
+
+                                <label class="custom-upload-area flex">
+                                  <span class="upload-icon flex">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                  </span>
+                                  <div class="desc flex">
+                                    <span>
+                                      اسحب وأفلت مستندًا أو
+                                      <mark>استعرضه</mark>
+                                    </span>
+                                    <span class="upload-note"
+                                      >الحد الأقصى الموصى به 1600 ميجابايت والحد
+                                      الأقصى 200 ميجابايت لكل ملف</span
+                                    >
+                                  </div>
+
+                                  <input
+                                    type="file"
+                                    accept="image/*,.pdf"
+                                    hidden
+                                    id="father-id-upload"
+                                  />
+                                </label>
+                                <div
+                                  id="file-preview"
+                                  class="file-preview"
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="step-btns flex">
+                  <button class="custom-btn with-transparnt prev-step">
+                    رجوع
+                  </button>
+                  <div class="btn-group">
+                    <button class="custom-btn with-background next-step">
+                      حغظ وإنهاء
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
+
+    <script src="./assets/js/chart.js"></script>
+    <!-- calender js -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.17/index.global.min.js"></script>
+
+    <script src="./assets/js/calender.js"></script>
+    <!-- apex chart -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>

@@ -1,18 +1,38 @@
+@font-face {
+  font-family: "Tajawal";
+  src: url(../fonts/Tajawal.ttf);
+}
+/* Variables */
 :root {
-  --primary-color: #007593;
-  --secondery-color: #7cc242;
-  --black-color: #000000;
-  --white-color: #ffffff;
+  --primary: #1d5166; /* Custom primary color */
+  --secondary: #28b6be; /* Custom secondary color */
+  --third-color: #016b85; /* Custom third color */
+  --green-color: #7cc242;
+  --gray-bg: #f0f1f3; /* Custom gray background color */
+  --placeholder: #afafaf; /* Custom placeholder color */
+  --black: #000000;
+  --white: #ffffff;
+  --primary-light: #f3f8f9;
   --body-bg: #f0f1f3;
+  --gray-text: #afafaf;
+  --dark-gray-text: #5d5d5d;
+  --main-padding-inline: clamp(10px, 1.5vw, 50px);
+  --input-height: 40px;
+  --box-shadow: 4px 4px 25px rgb(167, 167, 167);
   --border-raduis: 8px;
   --border-color: #d5d7da;
 }
 body {
   font-family: "Tajawal", sans-serif;
   font-weight: normal;
+  min-width: 400px;
+  max-width: 1600px;
+  margin: auto;
+  min-height: 100vh;
   font-size: 14px;
   background-color: var(--body-bg);
   color: var(--black-color);
+  padding-top: 72px;
 }
 * {
   box-sizing: border-box;
@@ -62,7 +82,8 @@ input {
   padding: 0;
   cursor: pointer;
 }
-.cutom-h {
+.custom-h,
+.custom-p {
   padding: 0;
   margin: 0;
 }
@@ -77,9 +98,12 @@ html[dir="rtl"] [type="tel"],
 html[dir="rtl"] [type="url"] {
   direction: rtl;
 }
-.collapse {
-  overflow: hidden;
-  transition: 0.3s ease;
-  height: 0;
-  opacity: 0;
+hr {
+  border-color: #d0d4d4;
+}
+a {
+  text-decoration: none;
+}
+:focus-visible {
+  outline: none !important;
 }
