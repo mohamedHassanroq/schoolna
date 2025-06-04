@@ -948,7 +948,6 @@ html[dir="rtl"] select.form-control {
 
 @media screen and (max-width:454px) {
   aside {
-    position: absolute;
     width: 0px;
   }
   aside.open {
